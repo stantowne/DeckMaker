@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/csv"
 	"fmt"
+	"github.com/stantowne/DeckMaker/deckMaker"
 	"log"
 	"os"
 	"strconv"
@@ -14,7 +15,7 @@ func main() {
 	var numDecks int
 	numDecks, _ = strconv.Atoi(count) //int
 	var decks [][]string
-	decks = DeckMaker(numDecks)
+	decks = deckMaker.DeckMaker(numDecks)
 	fmt.Printf("number of decks is: %v\n", len(decks))
 	now := time.Now()
 	path := "C:/Users/stan/Dropbox/07-programming/program-output/deckMaker/"
